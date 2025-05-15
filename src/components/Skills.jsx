@@ -15,7 +15,8 @@ const skillCategories = [
       { name: "HTML & CSS", icon: "bxl-html5" },
       { name: "Tailwind CSS", icon: "bxl-tailwind-css" },
       { name: "Redux Toolkit", icon: "bxl-redux" },
-      { name: "Framer Motion", icon: "bxs-bolt" }
+      { name: "Framer Motion", icon: "bxs-bolt" },
+      { name: "Next.js", icon: "bxl-javascript" }
     ]
   },
   {
@@ -34,7 +35,7 @@ const skillCategories = [
       { name: "Git/GitHub", icon: "bxl-github" },
       { name: "Postman", icon: "bxs-envelope" },
       { name: "Firebase", icon: "bxl-firebase" },
-      { name: "AWS", icon: "bxl-aws" },
+      
       { name: "Competitive Programming", icon: "bxs-brain" }
     ]
   }
