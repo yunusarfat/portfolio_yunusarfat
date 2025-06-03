@@ -19,16 +19,34 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    // Simulating form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+  try {
+    const response = await fetch("https://formspree.io/f/mldnekvn", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
-    toast.success("Message sent successfully! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
-    setIsSubmitting(false);
-  };
+    const result = await response.json();
+
+    if (response.ok) {
+      toast.success("Message sent successfully! I'll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      toast.error(result?.message || "Something went wrong. Please try again later.");
+    }
+  } catch (error) {
+    toast.error("Network error. Please try again later.");
+  }
+
+  setIsSubmitting(false);
+};
+
 
   return (
     <section id="contact" className="py-16 bg-white">
