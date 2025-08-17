@@ -1,23 +1,27 @@
+import React from "react";
+
 const skillCategories = [
   {
     name: "Languages",
     skills: [
+      { name: "C", icon: "bxs-terminal" },
+      { name: "C++", icon: "bxl-c-plus-plus" },
       { name: "JavaScript", icon: "bxl-javascript" },
       { name: "TypeScript", icon: "bxl-typescript" },
-      { name: "C++", icon: "bxl-c-plus-plus" },
-      { name: "C", icon: "bxs-terminal" }
-    ]
+      { name: "Python", icon: "bxl-python" },
+    ],
   },
   {
     name: "Front-End",
     skills: [
-      { name: "React.js", icon: "bxl-react" },
-      { name: "HTML & CSS", icon: "bxl-html5" },
+      { name: "Next.js", icon: "bxl-javascript" },
+      { name: "HTML", icon: "bxl-html5" },
       { name: "Tailwind CSS", icon: "bxl-tailwind-css" },
+      { name: "React.js", icon: "bxl-react" },
       { name: "Redux Toolkit", icon: "bxl-redux" },
       { name: "Framer Motion", icon: "bxs-bolt" },
-      { name: "Next.js", icon: "bxl-javascript" }
-    ]
+      { name: "Shadcn UI", icon: "bxs-cube" },
+    ],
   },
   {
     name: "Back-End",
@@ -25,44 +29,74 @@ const skillCategories = [
       { name: "Node.js", icon: "bxl-nodejs" },
       { name: "Express.js", icon: "bxs-data" },
       { name: "RESTful APIs", icon: "bx bx-transfer" },
-      { name: "MongoDB", icon: "bxl-mongodb" },
-      { name: "SQL Server", icon: "bxs-data" }
-    ]
+      { name: "Django REST Framework", icon: "bxl-python" },
+    ],
   },
   {
-    name: "Tools & Others",
+    name: "Database",
+    skills: [
+      { name: "MongoDB", icon: "bxl-mongodb" },
+      { name: "SQL Server", icon: "bxs-data" },
+      { name: "PostgreSQL", icon: "bxl-postgresql" },
+    ],
+  },
+  {
+    name: "Tools",
     skills: [
       { name: "Git/GitHub", icon: "bxl-github" },
       { name: "Postman", icon: "bxs-envelope" },
-      { name: "Firebase", icon: "bxl-firebase" },
-      
-      { name: "Competitive Programming", icon: "bxs-brain" }
-    ]
-  }
+    ],
+  },
+  {
+    name: "Competitive Programming",
+    skills: [
+      {
+        name: "300+ problems solved",
+        icon: "bxs-brain",
+      },
+    ],
+  },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-white to-blue-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-navy-dark mb-16 font-poppins">
-          <span className="text-blue-600">My</span> Skills
+    <section
+      id="skills"
+      className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-800"
+    >
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center text-white mb-16">
+          <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">
+            My
+          </span>{" "}
+          Skills
         </h2>
 
-        <div className="grid  grid-cols-1 md:grid-cols-2 gap-12">
-          {skillCategories.map((category) => (
-            <div key={category.name}>
-              <h3 className="text-xl font-semibold text-blue-800 mb-6 flex items-center gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+          {skillCategories.map((category, index) => (
+            <div
+              key={category.name}
+              className="fade-in-up"
+              style={{ animationDelay: `${index * 150}ms`, animation: "fadeInUp 0.8s ease-out forwards" }}
+            >
+              <h3 className="text-xl lg:text-2xl font-semibold text-purple-400 mb-6 flex items-center gap-3">
                 <i className="bx bxs-folder text-2xl"></i> {category.name}
               </h3>
-              <div className="grid bg-gray-200 p-3 rounded-2xl shadow-black hover:shadow-md grid-cols-2 sm:grid-cols-3 gap-4">
-                {category.skills.map((skill, index) => (
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {category.skills.map((skill, idx) => (
                   <div
                     key={skill.name}
-                    className={`bg-white rounded-xl shadow-md p-5 flex flex-col items-center justify-center text-center transition-transform transform hover:scale-105 fade-in delay-${index * 2}`}
+                    className="bg-gray-900 rounded-2xl shadow-lg p-5 flex flex-col items-center justify-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl border border-gray-800 hover:border-purple-500/40"
+                    style={{
+                      animationDelay: `${idx * 100}ms`,
+                      animation: "fadeInUp 0.8s ease-out forwards",
+                    }}
                   >
-                    <i className={`bx ${skill.icon} text-3xl text-blue-600 mb-2`}></i>
-                    <p className="text-sm font-medium text-gray-700">{skill.name}</p>
+                    <i className={`bx ${skill.icon} text-4xl text-purple-400 mb-3`}></i>
+                    <p className="text-sm lg:text-base font-medium text-gray-300">
+                      {skill.name}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -70,6 +104,20 @@ const Skills = () => {
           ))}
         </div>
       </div>
+
+      {/* Animations */}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </section>
   );
 };
