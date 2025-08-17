@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import image from "../assets/profile.jpg";
 
 const Hero = () => {
-  const [currentTitle, setCurrentTitle] = useState("");
+  const [currentTitle, setCurrentTitle] = useState("Full-Stack ");
   const titles = ["MERN ", "Software ", "Next.js ", "Full-Stack "];
 
   useEffect(() => {
