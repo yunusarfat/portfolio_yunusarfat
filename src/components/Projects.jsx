@@ -18,7 +18,7 @@ const Projects = () => {
         "Vapi",
       ],
       codeLink: "https://github.com/yunusarfat/TalkTutor_AI_SaaS_app_using_Nextjs",
-      image: "/talktutor.png", // <-- Add your image path here
+      image: "/talk.png", // <-- Add your image path here
     },
     {
       id: 2,
