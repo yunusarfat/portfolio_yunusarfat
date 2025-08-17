@@ -41,6 +41,7 @@ const Contact = () => {
       toast.error(result?.message || "Something went wrong. Please try again later.");
     }
   } catch (error) {
+    console.error(error);
     toast.error("Network error. Please try again later.");
   }
 
@@ -49,10 +50,10 @@ const Contact = () => {
 
 
   return (
-    <section id="contact" className="py-16 bg-white">
+    <section id="contact" className=" text-white min-h-screen bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800 py-16 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 font-poppins text-navy-dark">
-          Get In <span className="text-blue-600">Touch</span>
+          Get  <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">In Touch</span>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
@@ -90,7 +91,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium text-navy-dark">LinkedIn</h4>
                   <a 
-                    href="https://www.linkedin.com/in/yunus-md-arfat"
+                    href="https://www.linkedin.com/in/yunus-mohammad-arfat-8227a228b"
                     target="_blank"
                     rel="noreferrer"
                     className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -128,7 +129,7 @@ const Contact = () => {
           <div>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-700">
+                <label htmlFor="name" className="block mb-2 text-sm font-medium text-white">
                   Your Name
                 </label>
                 <Input
@@ -143,7 +144,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-700">
+                <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">
                   Your Email
                 </label>
                 <Input
@@ -159,7 +160,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-700">
+                <label htmlFor="message" className="block mb-2 text-sm font-medium text-white">
                   Message
                 </label>
                 <Textarea
