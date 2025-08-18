@@ -47,7 +47,7 @@ const Hero = () => {
               <button
                 size="lg"
                 className="items-center justify-center gap-2 px-2 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all"
-                onClick={() => window.open("/CV-ARFAT.pdf", "_blank")}
+                onClick={() => window.open("/CVs-ARFAT.pdf", "_blank")}
               >
                 Download CV
               </button>
