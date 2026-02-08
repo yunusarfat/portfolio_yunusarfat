@@ -19,7 +19,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="pt-8 pb-12 min-h-[50vh] md:min-h-screen
+    <section id="home" className="pt-10 pb-12 min-h-[50vh] md:min-h-screen
  flex items-center bg-gradient-to-b from-gray-900 via-gray-900 to-gray-600 text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center">
