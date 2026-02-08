@@ -29,7 +29,6 @@ const skillCategories = [
       { name: "Node.js", icon: "bxl-nodejs" },
       { name: "Express.js", icon: "bxs-data" },
       { name: "RESTful APIs", icon: "bx bx-transfer" },
-      { name: "Django REST Framework", icon: "bxl-python" },
     ],
   },
   {
@@ -56,6 +55,24 @@ const skillCategories = [
       },
     ],
   },
+  {
+    name: "Machine Learning",
+    skills: [
+      { name: "Supervised Learning", icon: "bxs-brain" },
+      { name: "Unsupervised Learning", icon: "bxs-network-chart" },
+      { name: "Model Evaluation", icon: "bxs-check-shield" },
+      { name: "Feature Engineering", icon: "bxs-filter-alt" },
+    ],
+  },
+  {
+    name: "Python Libraries",
+    skills: [
+      { name: "NumPy", icon: "bxs-bar-chart-alt-2" },
+      { name: "Pandas", icon: "bxs-spreadsheet" },
+      { name: "Matplotlib", icon: "bxs-pie-chart-alt-2" },
+    ],
+  },
+    
 ];
 
 const Skills = () => {
