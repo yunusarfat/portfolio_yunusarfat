@@ -6,6 +6,8 @@ const About = () => {
     "Object-Oriented Programming (OOP)",
     "Web Development",
     "Data Structures & Algorithms",
+    "Machine Learning",
+    "System Design",
     "Database Management Systems (DBMS)",
     "Software Engineering",
     "Compilers",
@@ -28,7 +30,7 @@ const About = () => {
       className="py-2 bg-gradient-to-b from-gray-600 via-gray-500 to-gray-900"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16 text-white">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 text-white">
           About{" "}
           <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">
             Me
@@ -43,8 +45,8 @@ const About = () => {
             <h3 className="text-xl lg:text-2xl font-bold text-purple-400 mb-4">
               Summary of Qualifications
             </h3>
-            <p className="text-gray-500 leading-relaxed">
-              I am a full-stack developer with expertise in building scalable and user-friendly web applications using Next.js, React.js, Node.js, and Django REST Framework. I specialize in creating responsive, intuitive interfaces and modern frontend technologies, while also designing and integrating secure RESTful APIs and authentication systems. With experience working across both SQL and NoSQL databases, along with Git/GitHub workflows, Postman testing, and collaborative projects, I bring clean code practices, problem-solving skills, and teamwork to deliver impactful software solutions.
+            <p className="text-gray-600 leading-relaxed">
+            I am a full-stack developer with strong experience in building scalable, user-friendly web applications using Next.js, React.js and Node.js. I specialize in creating responsive, intuitive frontend interfaces and designing secure RESTful APIs, with hands-on experience in authentication, data handling, and modern web workflows. I have worked with both SQL and NoSQL databases including PostgreSQL, MongoDB, and SQL Server, and regularly use Git/GitHub and Postman in collaborative development environments. In addition, I have a solid foundation in Machine Learning, having implemented core ML algorithms using Python, NumPy, Pandas, and Matplotlib, and I am currently learning Deep Learning concepts. With strong problem-solving skills and 350+ competitive programming problems solved, I bring a disciplined, analytical mindset to building reliable and impactful software solutions.
             </p>
           </CardContent>
         </Card>

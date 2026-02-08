@@ -19,7 +19,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="pt-32 pb-20 min-h-screen flex items-center bg-gradient-to-b from-gray-900 via-gray-900 to-gray-600 text-white">
+    <section id="home" className="pt-2 pb-12 min-h-[50vh] md:min-h-screen
+ flex items-center bg-gradient-to-b from-gray-900 via-gray-900 to-gray-600 text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-3/5 md:pr-12">
@@ -38,7 +39,7 @@ const Hero = () => {
               style={{ animationDelay: "0.2s" }}
             >
               Proficient in building responsive and scalable web applications with
-              Next.js, React.js, Node.js, Django RestFramework.
+              Next.js, React.js, Node.js and Machine Learning.
             </p>
             <div
               className="flex flex-wrap gap-4 animate-slide-up "
@@ -65,7 +66,7 @@ const Hero = () => {
               </button>
             </div>
             <div
-              className="flex mt-8 gap-6 animate-slide-up "
+              className="flex pt-2 mt-8 gap-6 animate-slide-up "
               style={{ animationDelay: "0.6s" }}
             >
               <a
@@ -129,7 +130,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-           <div className="md:w-2/5 mt-12 md:mt-0 flex justify-center">
+           <div className="hidden md:flex md:w-2/5 mt-12 md:mt-0 justify-center">
             <div className="relative rounded-full w-64 h-64 md:w-80 md:h-80 overflow-hidden border-4 border-purple-500 shadow-2xl animate-fade-in">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-700 via-pink-500 to-orange-400 opacity-30 z-10"></div>
               <img
