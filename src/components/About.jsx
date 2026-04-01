@@ -8,7 +8,7 @@ const About = () => {
     "Data Structures & Algorithms",
     "Machine Learning",
     "System Design",
-    "Database Management Systems (DBMS)",
+    "Database Management Systems",
     "Software Engineering",
     "Compilers",
   ];
